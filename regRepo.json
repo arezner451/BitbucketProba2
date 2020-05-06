@@ -1,0 +1,125 @@
+{
+    "scm": "git", 
+    "website": null, 
+    "has_wiki": true, 
+    "uuid": "{46ebc248-0fb3-4c9d-8fa2-0a05239ba313}", 
+    "links": {
+        "watchers": {
+            "href": "https://api.bitbucket.org/2.0/repositories/arezner451/masodikservice-1.0-snapshot/watchers"
+        }, 
+        "branches": {
+            "href": "https://api.bitbucket.org/2.0/repositories/arezner451/masodikservice-1.0-snapshot/refs/branches"
+        }, 
+        "tags": {
+            "href": "https://api.bitbucket.org/2.0/repositories/arezner451/masodikservice-1.0-snapshot/refs/tags"
+        }, 
+        "commits": {
+            "href": "https://api.bitbucket.org/2.0/repositories/arezner451/masodikservice-1.0-snapshot/commits"
+        }, 
+        "clone": [
+            {
+                "href": "https://bitbucket.org/arezner451/masodikservice-1.0-snapshot.git",
+                "name": "https"
+            }, 
+            {
+                "href": "git@bitbucket.org:arezner451/masodikservice-1.0-snapshot.git",
+                "name": "ssh"
+            }
+        ], 
+        "self": {
+            "href": "https://api.bitbucket.org/2.0/repositories/arezner451/masodikservice-1.0-snapshot"
+        }, 
+        "source": {
+            "href": "https://api.bitbucket.org/2.0/repositories/arezner451/masodikservice-1.0-snapshot/src"
+        }, 
+        "html": {
+            "href": "https://bitbucket.org/arezner451/masodikservice-1.0-snapshot"
+        }, 
+        "avatar": {
+            "href": "https://bytebucket.org/ravatar/%7B46ebc248-0fb3-4c9d-8fa2-0a05239ba313%7D?ts=java"
+        }, 
+        "hooks": {
+            "href": "https://api.bitbucket.org/2.0/repositories/arezner451/masodikservice-1.0-snapshot/hooks"
+        }, 
+        "forks": {
+            "href": "https://api.bitbucket.org/2.0/repositories/arezner451/masodikservice-1.0-snapshot/forks"
+        }, 
+        "downloads": {
+            "href": "https://api.bitbucket.org/2.0/repositories/arezner451/masodikservice-1.0-snapshot/downloads"
+        }, 
+        "issues": {
+            "href": "https://api.bitbucket.org/2.0/repositories/arezner451/masodikservice-1.0-snapshot/issues"
+        }, 
+        "pullrequests": {
+            "href": "https://api.bitbucket.org/2.0/repositories/arezner451/masodikservice-1.0-snapshot/pullrequests"
+        }
+    }, 
+    "fork_policy": "allow_forks", 
+    "full_name": "arezner451/masodikservice-1.0-snapshot", 
+    "name": "MasodikService-1.0-SNAPSHOT", 
+    "project": {
+        "links": {
+            "self": {
+                "href": "https://api.bitbucket.org/2.0/workspaces/arezner451/projects/SER"
+            }, 
+            "html": {
+                "href": "https://bitbucket.org/arezner451/workspace/projects/SER"
+            }, 
+            "avatar": {
+                "href": "https://bitbucket.org/account/user/arezner451/projects/SER/avatar/32?ts=1588622060"
+            }
+        }, 
+        "type": "project", 
+        "uuid": "{4c785e41-ff3a-4421-8397-be28885b5ddd}", 
+        "key": "SER", 
+        "name": "_ServicesMetaData"
+    }, 
+    "language": "java", 
+    "created_on": "2020-05-04T15:34:10.568200+00:00", 
+    "mainbranch": {
+        "type": "branch", 
+        "name": "master"
+    }, 
+    "workspace": {
+        "slug": "arezner451", 
+        "type": "workspace", 
+        "name": "attila rezner", 
+        "links": {
+            "self": {
+                "href": "https://api.bitbucket.org/2.0/workspaces/arezner451"
+            }, 
+            "html": {
+                "href": "https://bitbucket.org/arezner451/"
+            }, 
+            "avatar": {
+                "href": "https://bitbucket.org/workspaces/arezner451/avatar/?ts=1543675726"
+            }
+        }, 
+        "uuid": "{1c4d79f0-521d-400a-b596-7907fcf2bff5}"
+    }, 
+    "has_issues": true, 
+    "owner": {
+        "display_name": "Attila Rezner", 
+        "uuid": "{1c4d79f0-521d-400a-b596-7907fcf2bff5}", 
+        "links": {
+            "self": {
+                "href": "https://api.bitbucket.org/2.0/users/%7B1c4d79f0-521d-400a-b596-7907fcf2bff5%7D"
+            }, 
+            "html": {
+                "href": "https://bitbucket.org/%7B1c4d79f0-521d-400a-b596-7907fcf2bff5%7D/"
+            }, 
+            "avatar": {
+                "href": "https://secure.gravatar.com/avatar/3ae6e4a7d07a9040a815ff927e09b56c?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FAR-5.png"
+            }
+        }, 
+        "nickname": "arezner451", 
+        "type": "user", 
+        "account_id": "557058:4860f230-9d7c-4320-8ac8-333aa993f7f2"
+    }, 
+    "updated_on": "2020-05-05T12:57:37.844802+00:00", 
+    "size": 86176, 
+    "type": "repository", 
+    "slug": "masodikservice-1.0-snapshot", 
+    "is_private": false, 
+    "description": ""
+}
