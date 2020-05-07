@@ -11,7 +11,6 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.Base64;
 import java.util.Properties;
 
 /**
@@ -24,20 +23,21 @@ public class GetFromRepo {
         Properties systemProperties = System.getProperties();
         systemProperties.setProperty("https.proxyHost", "192.168.29.1");
         systemProperties.setProperty("https.proxyPort", "8080");
-        
-        String urlString = "https://api.bitbucket.org/2.0/repositories/arezner451/masodikservice-1.0-snapshot.git";
-        String userNamePass = args[0];// username:password -for bitbucket     
-        String basicAuth = "Basic " +Base64.getEncoder().encodeToString(userNamePass.getBytes());
-        
+        // base URL to query any info.
+        String urlString = "https://api.bitbucket.org/2.0/repositories/arezner451";
         URL url = new URL(urlString);
+        // open http connection and set headers.
         HttpURLConnection conn = (HttpURLConnection)url.openConnection();
-        
         conn.setRequestProperty("X-Request-With", "Curl");
         conn.setDoOutput(true);
         conn.setDoInput(true);
         conn.setRequestProperty("Accept", "application/json");
+        // username:password -for bitbucket
+//        String userNamePass = args[0];     
+//        String basicAuth = "Basic " +Base64.getEncoder().encodeToString(userNamePass.getBytes());        
+//        conn.setRequestProperty("Authorization", basicAuth);
         conn.setRequestMethod("GET");    
-        
+        // read the Bitbucket response.
         StringBuilder sb = new StringBuilder();
         BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
         String line = null;
@@ -45,6 +45,7 @@ public class GetFromRepo {
             sb.append(line +"\n");            
         }
         br.close();
+        // print Bitbucket response.
         System.out.println(sb.toString());        
     }
 }
