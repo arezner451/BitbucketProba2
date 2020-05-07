@@ -27,32 +27,33 @@ public class SendToRepo {
         Properties systemProperties = System.getProperties();
         systemProperties.setProperty("https.proxyHost", "192.168.29.1");
         systemProperties.setProperty("https.proxyPort", "8080"); 
-        
-        String urlString = "https://api.bitbucket.org/2.0/repositories/arezner451/proba3";
-        String userNamePass = args[0];// username:password -for bitbucket
-        String basicAuth = "Basic " +Base64.getEncoder().encodeToString(userNamePass.getBytes());
-        
+        // args contain the IRS_ID under repo will be created in bitbucket.
+        String urlString = "https://api.bitbucket.org/2.0/repositories/arezner451/" +args[1].toLowerCase();
         URL url = new URL(urlString);
-        HttpURLConnection conn = (HttpURLConnection)url.openConnection();
-        
+        // open http connection and set headers.
+        HttpURLConnection conn = (HttpURLConnection)url.openConnection();        
         conn.setRequestProperty("X-Request-With", "Curl");
         conn.setDoOutput(true);
         conn.setDoInput(true);
         conn.setRequestProperty("Content-Type", "application/json");
         conn.setRequestProperty("Accept", "application/json");
+        // username:password -for bitbucket
+        String userNamePass = args[0];
+        String basicAuth = "Basic " +Base64.getEncoder().encodeToString(userNamePass.getBytes());        
         conn.setRequestProperty("Authorization", basicAuth);
         conn.setRequestMethod("POST");
-                
+        // create request boby in JSON. 
         JSONObject jsonObject = new JSONObject(
-            "{\"scm\":\"git\",\"project\": {\"key\":\"SER\"}}"
+            // args contain the Bitbucket project under repo has to be created : APIS
+            "{\"scm\":\"git\",\"project\": {\"key\":\"" +args[2] +"\"}}"
         );
-        
+        // write and send the POST body. 
         OutputStream os = conn.getOutputStream();
         OutputStreamWriter osw = new OutputStreamWriter(os, "UTF-8");
         os.write(jsonObject.toString().getBytes("UTf-8"));
         osw.flush();
         os.close();
-        
+        // read the Bitbucket response.
         StringBuilder sb = new StringBuilder();
         BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
         String line = null;
@@ -60,6 +61,7 @@ public class SendToRepo {
             sb.append(line +"\n");            
         }
         br.close();
+        // print Bitbucket response.
         System.out.println(sb.toString());
     }
 }
